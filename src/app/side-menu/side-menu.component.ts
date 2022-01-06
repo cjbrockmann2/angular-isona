@@ -14,9 +14,10 @@ export class SidenavAutosizeExample {
   items = ['Geräte', 'Wizards', 'Fernzugriff', 'Zählertabellen'];
 
   menuItems = [
-    { id: 'geraete', title: 'Geräte', targetModule: '' },
-    { id: 'wizards', title: 'Wizards', targetModule: '' },
-    { id: 'fernzugriff', title: 'Fernzugriff', targetModule: '' },
-    { id: 'zaehler', title: 'Zählertabellen', targetModule: '' },
+    { id: '', title: 'Home' },
+    { id: 'geraete', title: 'Geräte' },
+    { id: 'wizards', title: 'Wizards' },
+    { id: 'fernzugriff', title: 'Fernzugriff' },
+    { id: 'zaehler', title: 'Zählertabellen' },
   ];
 }

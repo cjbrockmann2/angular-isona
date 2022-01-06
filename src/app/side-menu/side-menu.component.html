@@ -13,6 +13,7 @@
   <mat-drawer-container class="split-container" autosize>
     <mat-drawer #drawer class="sidenav" mode="side">
       <ul>
+        <li><a routerLink="./home" (click)="drawer.toggle()">Home</a></li>
         <li *ngFor="let item of menuItems">
           {{ item.title }}
         </li>
