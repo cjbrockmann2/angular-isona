@@ -1,0 +1,24 @@
+<div class="split-holder">
+  <div class="menu-bar">
+    <button
+      class="menu-bar-button"
+      type="button"
+      mat-button
+      (click)="drawer.toggle()"
+    >
+      Seiten-Menü
+    </button>
+  </div>
+
+  <mat-drawer-container class="split-container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+      <ul>
+        <li *ngFor="let item of menuItems">
+          {{ item.title }}
+        </li>
+      </ul>
+    </mat-drawer>
+
+    <div class="main-content" id="main-content"></div>
+  </mat-drawer-container>
+</div>

@@ -1,0 +1,42 @@
+.split-holder {
+  width: auto;
+  height: 100%;
+  flex: auto;
+}
+
+.menu-bar {
+  width: auto;
+  height: 5%;
+  background-color: white;
+  border-color: rgb(139, 139, 139);
+  border-width: 1px;
+  border-style: solid;
+}
+
+.menu-bar-button {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.split-container {
+  height: 95%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.main-content {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav {
+  width: 250px;
+  padding: 0px;
+  height: 100%;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgb(226, 168, 43);
+}
