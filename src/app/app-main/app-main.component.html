@@ -18,7 +18,6 @@
             mat-button
             routerLink="/{{ item.path }}"
             (click)="sidenav.close()"
-            [style]="color: {{item['color']}}"
             >{{ item['title'] }}</a
           >
         </span>
@@ -41,7 +40,6 @@
             mat-list-item
             routerLink="/{{ item.path }}"
             (click)="sidenav.close()"
-            [style]="color: {{item['color']}}"
             >{{ item['title'] }}</a
           >
         </span>
