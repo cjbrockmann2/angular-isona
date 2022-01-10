@@ -22,7 +22,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { FootBarComponent } from './foot-bar/foot-bar.component';
-import { SidenavAutosizeExample } from './side-menu/side-menu.component';
 import { HelloComponent } from './hello.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppMainComponent } from './app-main/app-main.component';
@@ -45,7 +44,6 @@ import { AppMainComponent } from './app-main/app-main.component';
     AppComponent,
     HelloComponent,
     TopBarComponent,
-    SidenavAutosizeExample,
     FootBarComponent,
     AppMainComponent,
   ],
