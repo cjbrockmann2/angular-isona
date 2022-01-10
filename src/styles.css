@@ -46,6 +46,7 @@ button {
 
 #routercontent {
   min-height: 60vh;
+  margin: 10px;
   margin-bottom: 40px;
   /* background-color: white; */
 }
