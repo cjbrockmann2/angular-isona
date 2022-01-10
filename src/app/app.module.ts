@@ -2,9 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
+// import {
+//   MatToolbarModule,
+//   MatSidenavModule,
+//   MatListModule,
+//   MatButtonModule,
+//   MatIconModule,
+// } from '@angular/material';
+
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /* import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; */
 
@@ -14,17 +24,20 @@ import { FootBarComponent } from './foot-bar/foot-bar.component';
 import { SidenavAutosizeExample } from './side-menu/side-menu.component';
 import { HelloComponent } from './hello.component';
 import { AppRoutingModule } from './app-routing.module';
-import { MainAppComponent } from './main-section/main-app.component';
+import { AppMainComponent } from './app-main/app-main.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    MatSidenavModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    MatButtonModule,
     AppRoutingModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule,
+
     /* FontAwesomeModule, */
   ],
   declarations: [
@@ -33,7 +46,7 @@ import { MainAppComponent } from './main-section/main-app.component';
     TopBarComponent,
     SidenavAutosizeExample,
     FootBarComponent,
-    MainAppComponent,
+    AppMainComponent,
   ],
   bootstrap: [AppComponent],
 })

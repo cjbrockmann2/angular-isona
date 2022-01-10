@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
  * @title Autosize sidenav
  */
 @Component({
-  selector: 'app-main',
+  selector: 'app-main-sidemenu',
   templateUrl: 'side-menu.component.html',
   styleUrls: ['side-menu.component.css'],
 })

@@ -1,0 +1,62 @@
+<div id="main">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button
+        mat-icon-button
+        (click)="sidenav.toggle()"
+        fxShow="true"
+        fxHide.gt-sm
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Responsive Navigation</span>
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md>
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+        <span *ngFor="let item of navItems">
+          <a
+            mat-button
+            routerLink="/{{ item.path }}"
+            (click)="sidenav.close()"
+            >{{ item.title }}</a
+          >
+        </span>
+
+        <button mat-icon-button title="Login">
+          <mat-icon>login</mat-icon>
+        </button>
+        <button mat-icon-button title="Logout">
+          <mat-icon>logout</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+        <span *ngFor="let item of navItems">
+          <a
+            mat-list-item
+            routerLink="/{{ item.path }}"
+            (click)="sidenav.close()"
+            >{{ item.title }}</a
+          >
+        </span>
+
+        <a mat-list-item routerLink="/home" (click)="sidenav.close()"
+          >Login&nbsp;&nbsp;<mat-icon>login</mat-icon></a
+        >
+        <a mat-list-item routerLink="/home" (click)="sidenav.close()"
+          >Logout&nbsp;<mat-icon>logout</mat-icon></a
+        >
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content fxFlexFill>
+      <div id="routercontent">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
