@@ -33,18 +33,16 @@ mat-toolbar a:hover {
   }
 }
 
-
-
 app-main {
   display: flex;
   flex-direction: column;
-  border: 1px dashed blue;
+  /* border: 1px dashed blue; */
 }
 
 #main {
   display: flex;
   flex-direction: column;
-  border: 1px dashed red;
+  /* border: 1px dashed red; */
   flex: 1 1 auto;
 }
 
