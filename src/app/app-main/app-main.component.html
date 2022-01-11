@@ -23,12 +23,19 @@
           >
         </span>
 
-        <button mat-icon-button title="Login">
-          <mat-icon>login</mat-icon>
+        <button mat-icon-button [matMenuTriggerFor]="menu" title="Profil">
+          <mat-icon>person</mat-icon>
         </button>
-        <button mat-icon-button title="Logout">
-          <mat-icon>logout</mat-icon>
-        </button>
+        <mat-menu #menu="matMenu" [overlapTrigger]="false">
+          <button mat-menu-item title="Login">
+            <mat-icon>login</mat-icon>
+            <span>Login</span>
+          </button>
+          <button mat-menu-item title="Logout">
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
@@ -44,14 +51,20 @@
             >{{ item['title'] }}</a
           >
         </span>
-
-        <a mat-list-item routerLink="/home" (click)="sidenav.close()"
-          >Login&nbsp;&nbsp;<mat-icon>login</mat-icon></a
-        >
-        <a mat-list-item routerLink="/home" (click)="sidenav.close()"
-          >Logout&nbsp;<mat-icon>logout</mat-icon></a
-        >
       </mat-nav-list>
+      <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+        <mat-expansion-panel-header
+          ><mat-icon>person</mat-icon>&nbsp;Profil
+        </mat-expansion-panel-header>
+        <mat-nav-list dense>
+          <a mat-list-item routerLink="#"
+            ><mat-icon>login</mat-icon>&nbsp;Login</a
+          >
+          <a mat-list-item routerLink="#"
+            ><mat-icon>logout</mat-icon>&nbsp;Logout</a
+          >
+        </mat-nav-list>
+      </mat-expansion-panel>
     </mat-sidenav>
 
     <mat-sidenav-content fxFlexFill>
